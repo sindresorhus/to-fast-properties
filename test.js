@@ -12,11 +12,11 @@ var toSlowProperties = function (obj) {
 test(function (t) {
 	var obj = toSlowProperties({});
 	obj.foo = 'foo';
-	t.assert(!%HasFastProperties(obj));
+	t.assert(!%HasFastProperties(obj), 'obj has slow properties');
 
 	toFastProperties(obj);
-	t.assert(%HasFastProperties(obj));
-	t.assert(obj.foo === 'foo');
+	t.assert(%HasFastProperties(obj), 'obj has fast properties');
+	t.assert(obj.foo === 'foo', 'obj has the same keys');
 
 	t.end();
 });
