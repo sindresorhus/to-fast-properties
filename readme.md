@@ -18,9 +18,17 @@ $ npm install --save to-fast-properties
 
 ```js
 var toFastProperties = require('to-fast-properties');
-var obj = {unicorn: true};
+
+var obj = {
+	foo: true,
+	bar: true
+};
+
+delete foo;
+// `obj` now has slow properties
+
 toFastProperties(obj);
-// Now `obj` has fast properties.
+// `obj` now has fast properties
 ```
 
 
