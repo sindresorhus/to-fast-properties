@@ -24,7 +24,7 @@ var obj = {
 	bar: true
 };
 
-delete foo;
+delete obj.foo;
 // `obj` now has slow properties
 
 toFastProperties(obj);
