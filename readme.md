@@ -34,4 +34,4 @@ toFastProperties(obj);
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © Petka Antonov, Sindre Sorhus
