@@ -17,9 +17,9 @@ $ npm install --save to-fast-properties
 ## Usage
 
 ```js
-var toFastProperties = require('to-fast-properties');
+const toFastProperties = require('to-fast-properties');
 
-var obj = {
+const obj = {
 	foo: true,
 	bar: true
 };
@@ -34,4 +34,4 @@ toFastProperties(obj);
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
