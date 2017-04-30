@@ -2,10 +2,12 @@
 module.exports = function toFastproperties(o) {
 	function Sub() {}
 	Sub.prototype = o;
-	var receiver = new Sub(); // create an instance
-	function ic() { return typeof receiver.foo; } // perform access
-	ic(); 
+	const receiver = new Sub(); // Create an instance
+	function ic() {
+		return typeof receiver.foo; // Perform access
+	}
+	ic();
 	ic();
 	return o;
-	eval("o" + o); // ensure no dead code elimination
-}
+	eval('o' + o); // Ensure no dead code elimination
+};
