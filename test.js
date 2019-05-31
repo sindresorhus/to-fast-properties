@@ -2,22 +2,22 @@
 const test = require('ava');
 const toFastProperties = require('.');
 
-const toSlowProperties = obj => {
+const toSlowProperties = object => {
 	for (let i = 0; i < 1000; i++) {
-		obj[`foo${i}`] = 'foo';
+		object[`foo${i}`] = 'foo';
 	}
 
-	return obj;
+	return object;
 };
 
-test(t => {
-	const obj = toSlowProperties({});
-	obj.foo = 'foo';
-	t.assert(!%HasFastProperties(obj), 'obj has slow properties');
+test('main', t => {
+	const object = toSlowProperties({});
+	object.foo = 'foo';
+	t.assert(!%HasFastProperties(object), 'object has slow properties');
 
-	toFastProperties(obj);
-	t.assert(%HasFastProperties(obj), 'obj has fast properties');
-	t.assert(obj.foo === 'foo', 'obj has the same keys');
+	toFastProperties(object);
+	t.assert(%HasFastProperties(object), 'object has fast properties');
+	t.assert(object.foo === 'foo', 'object has the same keys');
 
 	t.end();
 });
