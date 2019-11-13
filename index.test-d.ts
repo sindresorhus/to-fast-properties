@@ -4,8 +4,8 @@ import toFastProperties = require('.');
 expectType<{}>(toFastProperties());
 
 type Fixture = {
-	a: boolean,
-	b: number
+	a: boolean;
+	b: number;
 };
 
 const fixture: Fixture = {
