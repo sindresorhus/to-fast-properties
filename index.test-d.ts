@@ -1,8 +1,16 @@
-import {expectType, expectError} from 'tsd';
-import toFastProperties from '.';
+import {expectType} from 'tsd';
+import toFastProperties = require('.');
 
 expectType<{}>(toFastProperties());
 
-type boolNum = {a: boolean, b: number};
-const a: boolNum = {a: true, b:1};
-expectType<boolNum>(toFastProperties(a));
+type Fixture = {
+	a: boolean,
+	b: number
+};
+
+const fixture: Fixture = {
+	a: true,
+	b: 1
+};
+
+expectType<Fixture>(toFastProperties(fixture));
