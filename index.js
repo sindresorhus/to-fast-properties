@@ -15,7 +15,9 @@ function FastObject(o) {
 		fastProto = FastObject.prototype = null;
 		return result;
 	}
+
 	fastProto = FastObject.prototype = o == null ? Object.create(null) : o;
+
 	return new FastObject;
 }
 
