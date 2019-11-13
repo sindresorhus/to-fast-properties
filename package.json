@@ -13,10 +13,11 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "node --allow-natives-syntax test.js"
+		"test": "node --allow-natives-syntax test.js && tsd"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"object",
@@ -30,6 +31,6 @@
 	],
 	"devDependencies": {
 		"ava": "0.0.4",
-		"xo": "^0.24.0"
+		"tsd": "^0.10.0"
 	}
 }
