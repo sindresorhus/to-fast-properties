@@ -32,10 +32,6 @@
 	"devDependencies": {
 		"ava": "0.0.4",
 		"tsd": "^0.10.0"
-	},
-	"tsd": {
-        "compilerOptions": {
-            "esModuleInterop": true
-        }
+	}
     }
 }
