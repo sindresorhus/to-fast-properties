@@ -21,14 +21,13 @@ function FastObject(o) {
 	return new FastObject;
 }
 
-const kInlineCacheCutoff = 10;
+const inlineCacheCutoff = 10;
 
-// Initialize the inline property cache of FastObject
-for(let i = 0; i <= kInlineCacheCutoff; i++) {
+// Initialize the inline property cache of FastObject.
+for (let i = 0; i <= inlineCacheCutoff; i++) {
 	FastObject();
 }
 
 module.exports = function toFastproperties(o) {
 	return FastObject(o);
 };
-
