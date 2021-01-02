@@ -1,4 +1,4 @@
-# to-fast-properties [![Build Status](https://travis-ci.org/sindresorhus/to-fast-properties.svg?branch=master)](https://travis-ci.org/sindresorhus/to-fast-properties)
+# to-fast-properties
 
 > Force V8 to use fast properties for an object
 
