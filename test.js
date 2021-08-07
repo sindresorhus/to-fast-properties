@@ -1,6 +1,5 @@
-'use strict';
-const test = require('ava');
-const toFastProperties = require('.');
+import test from 'ava';
+import toFastProperties from './index.js';
 
 const toSlowProperties = object => {
 	for (let i = 0; i < 1000; i++) {

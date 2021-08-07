@@ -1,5 +1,3 @@
-'use strict';
-
 let fastProto = null;
 
 // Creates an object with permanently fast properties in V8. See Toon Verwaest's
@@ -28,6 +26,6 @@ for (let i = 0; i <= inlineCacheCutoff; i++) {
 	FastObject();
 }
 
-module.exports = function toFastproperties(o) {
+export default function toFastproperties(o) {
 	return FastObject(o);
 };

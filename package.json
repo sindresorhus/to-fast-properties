@@ -11,8 +11,9 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
+	"type": "module",
 	"scripts": {
 		"test": "node --allow-natives-syntax test.js && tsd"
 	},
