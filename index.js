@@ -16,7 +16,7 @@ function FastObject(object) {
 
 	fastProto = FastObject.prototype = object == null ? Object.create(null) : object;
 
-	return new FastObject;
+	return new FastObject();
 }
 
 const inlineCacheCutoff = 10;
