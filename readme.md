@@ -15,7 +15,7 @@ $ npm install to-fast-properties
 ## Usage
 
 ```js
-const toFastProperties = require('to-fast-properties');
+import toFastProperties from 'to-fast-properties';
 
 const object = {
 	foo: true,

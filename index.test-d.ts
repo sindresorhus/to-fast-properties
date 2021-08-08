@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import toFastProperties = require('.');
+import toFastProperties from './index.js';
 
 expectType<{}>(toFastProperties());
 
